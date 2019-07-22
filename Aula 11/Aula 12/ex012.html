@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Greetings</title>
+</head>
+<body>
+    <h1>Quais são as horas?</h1>
+    <input type="number" name="hora" id="hora">
+    <input type="button" value="verificar" onclick="checar()">
+    <div id="res"><br>
+
+    </div>
+    <script>
+        var hora = document.querySelector('input#hora')
+        var res = document.querySelector('div#res')
+        function checar(){
+            
+            if(hora.value >= 5 && hora.value < 12){
+                res.innerHTML += `São exatamente <strong>${hora.value} horas</strong>. <br> Bom dia!`
+            }
+            else if(hora.value >= 12 && hora.value < 18){
+                res.innerHTML += `São exatamente <strong>${hora.value} horas</strong>. <br> Boa tarde!`
+            }
+            else if (hora.value >= 18 && hora.value < 0){
+                res.innerHTML += `São exatamente <strong>${hora.value} horas</strong>. <br> Boa Noite!`
+            }
+            else if(hora.value >= 00 && hora.value < 5){
+                res.innerHTML += `São exatamente <strong>${hora.value} horas</strong>. <br> Boa Madrugada!`
+            }
+           
+        }
+    </script>
+</body>
+</html>
