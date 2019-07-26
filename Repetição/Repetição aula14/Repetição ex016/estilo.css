@@ -1,0 +1,54 @@
+body{
+    background: rgb(116, 215, 240);
+    font: normal 15pt Arial;
+
+}
+
+header{
+    color: white;
+    text-align: center;
+
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin:auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.322);
+}   
+div#bel {
+    padding: 0px 0px 0px 100px; 
+   
+}    
+input#inicio {
+    margin-left: 15px;
+  
+}
+input#fim {
+    margin-left:  30px;
+}
+input#passo {
+    margin-left: -2px;
+}
+input#btn {
+    padding:  10px 65px 10px 58px;
+    margin: 0px 73px;
+    font: bolder 9pt Arial;
+    background-color: #84a9ab;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.322); 
+    color: white;
+    text-transform: uppercase; 
+}
+div#res {
+    text-align: center;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+
+}
