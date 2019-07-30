@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercicio condição 2</title>
+</head>
+<body>
+    <h1>Qual a sua idade?</h1>
+    <input type="number" name="num" id="num">
+    <input type="button" value="Clique" onclick="checar()">
+    <div id="res">
+
+    </div>
+    <script>
+        
+        var numero = window.document.querySelector('input#num')
+        var resposta = window.document.querySelector('div#res')
+        function checar(){
+            if(numero.value < 16){
+                resposta.innerHTML += `Você tem ${numero.value}, e você não pode votar!`
+            }
+            else{
+                
+                if(numero.value >= 16 && numero.value < 18 || numero.value > 64 ){
+                    resposta.innerHTML += `Você tem ${numero.value} anos, e seu voto é opcional!`
+                }
+                else{
+                    resposta.innerHTML += `Você tem ${numero.value} anos, e o seu voto é obrigatório!`
+                }
+            }
+        }
+    </script>
+</body>
+</html>
