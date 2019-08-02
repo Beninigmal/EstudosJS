@@ -10,12 +10,14 @@ function contar() {
   } else if (inicio.value == fim.value) {
     alert('O campo INICIO não pode ser igual ao campo FIM!')
   } else if (Number(passo.value) <= 0) {
+    alert('Não é possível efetuar a contagem com o valor 0, será considerado o valor 1')
+    p = 1
     ini = Number(inicio.value)
     f = Number(fim.value)
     p = Number(passo.value)
     res.innerHTML += 'Contando:'
-    alert('Não é possível efetuar a contagem com o valor 0, será considerado o valor 1')
-    p = 1
+   
+    
     if (ini < f) {
       for (let i = ini; i <= f; i += p) {
         res.innerHTML += ` ${i} \u{27a1}`
