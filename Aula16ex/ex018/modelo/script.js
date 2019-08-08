@@ -1,8 +1,7 @@
-// let numero = document.getElementById('numero')
-// let exibir = document.querySelector('select#varicom')
-// let res = document.querySelector('div#res')
-// let valores = []
-
+let num = document.querySelector('input#numero')
+let lista = document.querySelector('select#flista')
+let res = document.querySelector('div#res')
+let valores = []
 
 function isNumero(n) {
     if (Number(n) >= 1 && Number(n) <= 100) {
@@ -12,7 +11,7 @@ function isNumero(n) {
     }
 }
 
-function inlista(n, l) {
+function inLista(n, l) {
     if (l.indexOf(Number(n)) != -1) {
         return true
     } else {
@@ -21,19 +20,35 @@ function inlista(n, l) {
 }
 
 function adicionar() {
-    let numero = document.getElementById('numero')
-    let exibir = document.querySelector('select#varicom')
-    let res = document.querySelector('div#res')
-    let valores = []
-
-
-    if (isNumero(numero.value) && !inLista(numero.value, valores)) {
+    if (isNumero(num.value) && !inLista(num.value, valores)) {
+        valores.push(Number(num.value))
         let item = document.createElement('option')
-        item.text = `Inserido o número: ${numero.value}`
-        item.value = `${numero.value}`
-        exibir.appendChild(item)
-
+        item.text = `Valor ${num.value} adicionado.`
+        lista.appendChild(item)
+        res.innerHTML = ' '
     } else {
-        alert('Valor invalido ou já encontrado na lista')
+        window.alert('Valor inválido ou já encontrado na lista.')
+    }
+    num.value = ' '
+    num.focus()
+}
+
+function imprimir() {
+    if (valores.length == 0) {
+        alert('Não é possível finalizar sem ter adicionado valóres previamente!')
+    } else {
+        let tot = valores
+        let maior = valores[0]
+        let menor = valores[0]
+
+
+        res.innerHTML += `<p>A quantidade de números inseridos foi ${tot.length}</p>`
+        res.innerHTML += `<p>Os números digitados são ${tot}</p>`
+
+
+        //contar quantas posições tem o campo
+        //Dizer qual é o maior e menor número
+        //Efetuar a soma de todos os números
+        //efetuar a média desses números
     }
 }
