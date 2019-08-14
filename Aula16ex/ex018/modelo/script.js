@@ -50,5 +50,6 @@ function imprimir() {
         //Dizer qual é o maior e menor número
         //Efetuar a soma de todos os números
         //efetuar a média desses números
+
     }
 }
