@@ -37,14 +37,28 @@ function imprimir() {
     if (valores.length == 0) {
         alert('Não é possível finalizar sem ter adicionado valóres previamente!')
     } else {
-        let tot = valores
+        let tot = valores.length
         let maior = valores[0]
         let menor = valores[0]
+        let soma = 0
+        let media = 0
+        for (let pos in valores) {
+            soma += valores[pos]
 
+            if (valores[pos] > maior) {
+                maior = valores[pos]
 
-        res.innerHTML += `<p>A quantidade de números inseridos foi ${tot.length}</p>`
-        res.innerHTML += `<p>Os números digitados são ${tot}</p>`
-
+            }
+            if (valores[pos] < menor) {
+                menor = valores[pos]
+            }
+        }
+        media = soma / tot
+        res.innerHTML += `<p>A quantidade de números inseridos foi ${tot}</p>`
+        res.innerHTML += `<p>Os números digitados são ${valores}</p>`
+        res.innerHTML += `<p>O maior número inserido foi ${maior}, e o menor número foi ${menor}</p>`
+        res.innerHTML += `<p>A soma dos números inseridos é ${soma}</p>`
+        res.innerHTML += `<p>A média dos números inseridos é ${media}</p>`
 
         //contar quantas posições tem o campo
         //Dizer qual é o maior e menor número
